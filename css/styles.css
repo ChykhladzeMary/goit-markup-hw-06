@@ -1018,7 +1018,7 @@ background-color: var(--accent-color);
         letter-spacing: 0.03em;
     padding-bottom: 12px;
     padding-top: 40px;
-        color: var(--main-color);
+    color: var(--main-color);
 }
 
 .textarea-field {
@@ -1030,17 +1030,16 @@ background-color: var(--accent-color);
 }
 
 .textarea {
-padding: 12px 16px;
+    padding: 12px 16px;
     width: 448px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-   cursor: pointer;
+    cursor: pointer;
+    font-size: 12px;
     box-sizing: border-box;
     border-radius: 4px;
     resize: none;
-    
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      
-       
+    transition: border-color var(--animation), outline var(--animation);
+         
 }
 
 .textarea:focus {
@@ -1049,35 +1048,55 @@ padding: 12px 16px;
 }
 
 .policy-text {
-    font-family: 'Roboto';
+   font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.7;
-       
-    
         letter-spacing: 0.03em;
-    
         color: var(--secondary-color)
+}
+.policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-policy {
     display: flex;
-        justify-content: center;
-        text-align: center;
-            margin-bottom: 30px;
-            padding: 0;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.policy-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.policy-check {
+    width: 16px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: 2px solid var(--main-color);
+    margin-right: 8px;
+    transform: scale(0.9);
+    transition: transform var(--animation), background-color var(--animation), border-color var(--animation)
 }
 
-.policy-input {
-width: 16px;
-height: 15px;
-display: inline-block;
-background-color: var(--main-color);
-border-radius: 2px;
-margin-right: 8px;
-    transform: scale(0.9);
-        transition: transform var(--animation), background-color var(--animation), border-color var(--animation)
+.policy-input:checked + .policy-check {
+background-color: var(--accent-color);
+background-origin: border-box;
+border-color: var(--accent-color);
+   
 }
 .agreement {
    
@@ -1105,4 +1124,66 @@ margin-right: 8px;
         letter-spacing: 0.06em;
     
         color: var(--title-color);
+}
+
+.form-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--background-color-basic);
+    margin: 0;
+    padding: 15px;
+    transition: border-color var(--animation); outline: var(--animation);
+}
+
+.form-input:hover 
+
+.form-field {
+    margin-right: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    
+}
+.newsletter {
+    margin-left: 93px;
+}
+.newsletter-form {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+}
+.newsletter-btn {
+    display: flex;
+    align-items: center;
+    text-align: inherit;
+    min-width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    color: var(--title-color);
+    font-family: 'Roboto';
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+
+.newsletter-icon {
+  
+    padding-left: 10px;
+    width: 24px;
+    height: 24px;
 }
