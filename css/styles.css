@@ -846,7 +846,8 @@ transition: background-color var(--animation);
     transition: var(--animation);
     cursor: pointer;
 }
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus {
 fill: var(--accent-color);
 }
 .modal-icon {
@@ -1047,6 +1048,21 @@ background-color: var(--accent-color);
     outline: none;
 }
 
+
+
+.textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+    transition: color var(--animation)
+}
+
+.textarea:focus::placeholder {
+    color: var(--accent-color);
+}
 .policy-text {
    font-family: 'Roboto';
         font-style: normal;
@@ -1126,6 +1142,11 @@ border-color: var(--accent-color);
         color: var(--title-color);
 }
 
+.modal-submit:hover,
+.modal-submit:focus {
+background: var(--background-main-btn);
+}
+
 .form-input {
     width: 358px;
     height: 50px;
@@ -1135,13 +1156,28 @@ border-color: var(--accent-color);
     background-color: var(--background-color-basic);
     margin: 0;
     padding: 15px;
-    transition: border-color var(--animation); outline: var(--animation);
+    color: rgba(255, 255, 255, 0.3);
+    transition: border var(--animation); color var
+        
 }
 
-.form-input:hover 
+.form-input:hover::placeholder,
+.form-input:focus::placeholder {
+ border:  rgba(255, 255, 255, 0.5);
+ color: rgba(255, 255, 255, 0.5);
+}
+
+
+.form-input:hover,
+.form-input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
 
 .form-field {
     margin-right: 10px;
+    position: relative;
+    flex-direction: column;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -1151,8 +1187,16 @@ border-color: var(--accent-color);
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    
+
+    transition: color var(--animation);
 }
+
+.form-field:hover,
+.form-field:focus {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
 .newsletter {
     margin-left: 93px;
 }
@@ -1167,7 +1211,7 @@ border-color: var(--accent-color);
     text-align: inherit;
     min-width: 200px;
     height: 50px;
-    background: var(--accent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
@@ -1178,12 +1222,17 @@ border-color: var(--accent-color);
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
+
+    transition: background-color var(--background-main-btn)
 }
 
+.newsletter-btn:hover,
+.newsletter-btn:focus {
+    background-color: var(--background-main-btn)
+}
 
 .newsletter-icon {
   
-    padding-left: 10px;
-    width: 24px;
-    height: 24px;
+    margin-left: 10px;
+   
 }
