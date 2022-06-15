@@ -649,6 +649,7 @@ transition: background-color var(--animation);
     align-items: center;
     width: 170px;
     height: 92px;
+    outline: transparent;
     fill: var(--color-icon);
     border: 1px solid var(--color-icon);
     border-radius: 4px;
@@ -685,6 +686,10 @@ transition: background-color var(--animation);
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
     fill: var(--accent-color);
+    transition: fill var(--animation);
+}
+
+.clients-icon {
     transition: fill var(--animation);
 }
 .feat {
@@ -734,6 +739,10 @@ transition: background-color var(--animation);
         margin-right: 10px;
 }
 
+.attention-title-list {
+    margin-right: 93px;
+}
+
 .work .work-text {
   
     display: flex;
@@ -770,7 +779,7 @@ transition: background-color var(--animation);
     background-color: var(--accent-color);
     position: absolute;
     border-radius: 2px;
-    bottom: 0px;
+    bottom: -1px;
     left: 0px;
 
 }
@@ -799,6 +808,7 @@ transition: background-color var(--animation);
 }
 
 .modal-wrapper {
+    padding: 40px;
     background-color: #ffffff;
     width: 528px;
     height: 581px;
@@ -840,10 +850,19 @@ transition: background-color var(--animation);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border var(--accent-color);
 }
+
+.modal-btn:focus,
+.modal-btn:hover {
+border-color: var(--accent-color);
+}
+
+
+
 .modal-close {
     fill: var(--main-color);
-    transition: var(--animation);
+    transition: fill var(--animation);
     cursor: pointer;
 }
 .modal-close:hover,
@@ -965,7 +984,7 @@ background-color: var(--accent-color);
     cursor: pointer;
        margin: 0;
         padding: 11px 12px 11px 42px;
-       
+       transition: color var(--animation);
         height: 40px;
         
     font: inherit;
@@ -986,7 +1005,6 @@ background-color: var(--accent-color);
 .modal-form {
     box-sizing: border-box;
     width: 448px;
-        margin: 0 auto;
         text-align: center;
 }
 .modal-field {
@@ -1017,8 +1035,7 @@ background-color: var(--accent-color);
         line-height: 1.15;
         text-align: center;
         letter-spacing: 0.03em;
-    padding-bottom: 12px;
-    padding-top: 40px;
+    margin-bottom: 12px;
     color: var(--main-color);
 }
 
@@ -1094,7 +1111,10 @@ background-color: var(--accent-color);
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+    transition: border-color var(--animation);
 }
+
+
 .policy-check {
     width: 16px;
     height: 15px;
@@ -1105,9 +1125,13 @@ background-color: var(--accent-color);
     border: 2px solid var(--main-color);
     margin-right: 8px;
     transform: scale(0.9);
-    transition: transform var(--animation), background-color var(--animation), border-color var(--animation)
+    transition: transform var(--animation), background-color var(--animation), border-color var(--animation);
 }
 
+.policy-input:focus + .policy-check {
+    border-color: var(--accent-color);
+
+}
 .policy-input:checked + .policy-check {
 background-color: var(--accent-color);
 background-origin: border-box;
@@ -1197,9 +1221,7 @@ background: var(--background-main-btn);
 }
 
 
-.newsletter {
-    margin-left: 93px;
-}
+
 .newsletter-form {
     position: relative;
     display: flex;
