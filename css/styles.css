@@ -482,7 +482,7 @@ transition: background-color var(--animation);
     margin-right: 0px;
 }
 
-}
+
 .team-member {
     font-weight: 500;
     font-size: 16px;
@@ -854,8 +854,8 @@ transition: background-color var(--animation);
 }
 
 .modal-btn:focus,
-.modal-btn:hover {
-border-color: var(--accent-color);
+.modal-btn:hover .modal-close {
+fill: var(--accent-color);
 }
 
 
@@ -865,19 +865,19 @@ border-color: var(--accent-color);
     transition: fill var(--animation);
     cursor: pointer;
 }
-.modal-close:hover,
-.modal-close:focus {
-fill: var(--accent-color);
-}
+
 .modal-icon {
     position: absolute;
     top: 50%;
     left: 15px;
+    transform: translate(-50%);
     fill: var(--main-color);
 
     display: inline-block;
     transition: fill var(--animation)
 }
+
+
 
 .animation-description {
     display: block;
@@ -982,14 +982,14 @@ background-color: var(--accent-color);
 .modal-input {
   
     cursor: pointer;
-       margin: 0;
-        padding: 11px 12px 11px 42px;
-       transition: color var(--animation);
-        height: 40px;
-        
+    margin: 0;
+    padding: 11px 12px 11px 42px;
+    transition: color var(--animation);
+    height: 40px;
+    width: 100%;
     font: inherit;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 }
 
 .modal-input:focus + .modal-icon {
