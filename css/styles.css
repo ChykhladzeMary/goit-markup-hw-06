@@ -277,18 +277,25 @@ img {
     margin-bottom: 9px;
 }
 
-.address-mail, .address-phone:hover,
-.address-mail, .address-phone:focus {
+.address-mail:hover,
+.address-mail:focus {
+        color: var(--accent-color);
+}
+
+.address-phone:hover,
+.address-phone:focus {
     color: var(--accent-color);
+}
+   
    
 
-}
+
 
 .studio-logo {
     color: var(--title-color);
 }
 
-.map {
+.address-map {
     color: var(--title-color);
     font-size: 14px;
     line-height: 1.71;
@@ -391,12 +398,12 @@ transition: background-color var(--animation);
     display: flex;
 }
 
-.work .work-item {
+.work .item {
     width: calc(100% - 60px) / 3;
     margin-right: 30px;
 }
 
-.work .work-item:last-child {
+.work .item:last-child {
     margin-right: 0px;
 }
 
