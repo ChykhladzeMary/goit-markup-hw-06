@@ -123,7 +123,7 @@ img {
     margin-right: 50px;
     }
 
-    .navigation {
+    .nav {
         margin-right: auto;
     }
     
@@ -162,7 +162,7 @@ img {
     transition: fill var(--animation);
 }
 
-.contacts {
+.contact {
     display: flex;
     align-items: center;
   
@@ -192,7 +192,7 @@ img {
 }
 
 
-.contacts .item + .item {
+.contact .item + .item {
     margin-left: 50px;
 }
 
@@ -212,7 +212,7 @@ img {
 
 }
 
-.contact-footer {
+.address-mail, .address-phone {
     color: var(--additional-color);
     font-size: 14px;
     line-height: 1.71;
@@ -277,8 +277,8 @@ img {
     margin-bottom: 9px;
 }
 
-.contact-footer:hover,
-.contact-footer:focus {
+.address-mail, .address-phone:hover,
+.address-mail, .address-phone:focus {
     color: var(--accent-color);
    
 
@@ -370,17 +370,17 @@ transition: background-color var(--animation);
     flex-wrap: wrap;
 }
 
-.features .item {
+.features .features-item {
     width:calc((100% - 90px) / 4);
     margin-right: 30px;
 
 }
 
-.features .item:last-child {
+.features .features-item:last-child {
     margin-right: 0px;
 }
 
-.description {
+.features-description {
     color: var(--secondary-color);
     font-size: 14px;
     line-height: 1.71;
@@ -391,12 +391,12 @@ transition: background-color var(--animation);
     display: flex;
 }
 
-.work .item {
+.work .work-item {
     width: calc(100% - 60px) / 3;
     margin-right: 30px;
 }
 
-.work .item:last-child {
+.work .work-item:last-child {
     margin-right: 0px;
 }
 
@@ -436,7 +436,7 @@ transition: background-color var(--animation);
 }
 
 
-.speciality {
+.team-speciality {
     color: var(--secondary-color);
     font-size: 16px;
     line-height: 1.19;
@@ -449,7 +449,7 @@ transition: background-color var(--animation);
     margin-bottom: 10px;
 }
 
-.foto-descr {
+.team-descr {
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 32px;
@@ -469,7 +469,7 @@ transition: background-color var(--animation);
     display: flex;
 }
 
-.team-list .item {
+.team-list .team-item {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -478,7 +478,7 @@ transition: background-color var(--animation);
     background-color: #FFFFFF;
 }
 
-.team-list .item:last-child {
+.team-list .team-item:last-child {
     margin-right: 0px;
 }
 
@@ -620,12 +620,12 @@ transition: background-color var(--animation);
     transition: background-color var(--animation);
 }
 
-.social-icon {
+.socials-icon {
     fill: var(--color-icon);
 }
 
-.socials-link:hover .social-icon,
-.socials-link:focus .social-icon {
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
     fill: var(--title-color);
     transition: fill var(--animation);
 }
